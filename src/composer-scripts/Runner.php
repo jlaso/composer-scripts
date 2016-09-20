@@ -58,13 +58,13 @@ class Runner
     {
         $source = self::$rootFolder.DIRECTORY_SEPARATOR.self::doPath($data['source']);
         $dest = self::doPath($data['dest']);
-        if(!is_file($dest)) {
+        if(is_file($source) && is_dir($dest)) {
             $dest .= DIRECTORY_SEPARATOR.basename($source);
         }
         $cmd = isset($data['method']) && ('ln' === strtolower($data['method'])) ? 'ln' : 'cp';
         $io->write(sprintf("\t%s -> <info>%s</info> -> %s", $data['source'], $cmd, $dest));
+        file_exists($dest) && unlink($dest);
         if('cp' != $cmd){
-            file_exists($dest) && unlink($dest);
             symlink($source, $dest);
         }else{
             copy($source, $dest);

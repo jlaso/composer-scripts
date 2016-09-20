@@ -16,15 +16,19 @@ scripts:
     copy:
         -
             source: vendor/gurayyarar/AdminBSBMaterialDesign/css
-            dest: src/Acme/AdminBundle/Resources/public
+            dest: src/Acme/AdminBundle/Resources/public/css
             method: ln
         -
             source: vendor/gurayyarar/AdminBSBMaterialDesign/images
-            dest: src/Acme/AdminBundle/Resources/public
+            dest: src/Acme/AdminBundle/Resources/public/images
             method: ln
         -
             source: vendor/gurayyarar/AdminBSBMaterialDesign/js
-            dest: src/Acme/AdminBundle/Resources/public
+            dest: src/Acme/AdminBundle/Resources/public/js
+            method: ln
+        -
+            source: vendor/gurayyarar/AdminBSBMaterialDesign/plugins
+            dest: src/Acme/AdminBundle/Resources/public/plugins
             method: ln
 ```
 
