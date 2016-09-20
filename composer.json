@@ -1,0 +1,28 @@
+{
+  "name": "jlaso/composer-scripts",
+  "description": "Composer scripts",
+  "keywords": ["composer", "script", "automatize"],
+  "homepage": "https://github.com/jlaso/composer-scripts",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Joseluis Laso",
+      "role": "Developer"
+    }
+  ],
+  "version": "1.0",
+  "require": {
+    "php": ">=5.4",
+    "symfony/yaml": "~2.3"
+  },
+  "require-dev": {
+    "composer/composer": "1.0.*@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "JLaso\\ComposerScripts\\": "src/composer-scripts/"
+    }
+  },
+  "minimum-stability": "dev"
+}
